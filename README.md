@@ -29,7 +29,8 @@ where $\hat{p}(\mathbf{x}_i) = 1\big/(1 + \exp{-(\mathbf{x}_i^\top \boldsymbol{\
 
 ### k-Nearest Neighbours
 k-nearest neighbours (kNN) was chosen because of its simplicity and ease of interpretation. Its goal is to predict a class based on neighbour data points, by finding the class $c$ that maximises the number of neighbour points $\mathbf{x}_j$ in a set $S_k$ of $k$ neighbours:
-$$\hat{y_i} = \argmax_c \sum_{j:\: \mathbf{x}_j \in S_k}\mathbf{1}\{\mathbf{x}_j \text{ in class } c \}$$
+
+$$\hat{y_i} = \argmax_c \sum_{j:\: \mathbf{x}_j \in  S_k}\mathbf{1}\{\mathbf{x}_j \text{ in class } c \}$$
 
 ### Decision Tree and Random Forest
 Decision tree (DT) was also considered in addition because of its computational speed,
