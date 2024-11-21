@@ -17,11 +17,18 @@ The main codebase for this repository is available in the `code/` directory, whe
 
 Detailed reports for each phase of the study is available in the `report/` repository.
 
+## The data
+The data is available in the `code/` directory, which contains de-identified customer information from a telecommunications company in a single quarter. It includes:
+- Demographic variables e.g. age, job, education status
+- Macro-economic factors e.g. Euribor rate.
+
+The target is `y`, which denotes whether or not the customer subscribed to a new communication plan.
+
+
 ## The statistical models
 
 ### Logistic Regression
-Logistic Regression (LR) was chosen because of its straightforward interpretation of co-
-efficients. Lasso-penalised LR is used to prevent overfitting. The goal is to minimise the Lasso negative log-likelihood via maximum likelihood estimation:
+Logistic Regression (LR) was chosen because of its straightforward interpretation of coefficients. Lasso-penalised LR is used to prevent overfitting. The goal is to minimise the Lasso negative log-likelihood via maximum likelihood estimation:
 
 $$\min_{\boldsymbol{\beta}} \sum_{i=1}^n \big[- y_i \ln(\hat{p}(\mathbf{x}_i)) - (1-y_i)\ln(1 - \hat{p}(\mathbf{x}_i))\big] + \lambda\Vert\boldsymbol{\beta}\Vert_1,$$
 
